@@ -26,4 +26,24 @@ public class StringUtilTest {
         StringUtil.repeat("hola", -1);
     }
 
+    @Test
+    public void string_not_empty(){
+        Assert.assertFalse(StringUtil.isEmpty("hola"));
+    }
+
+    @Test
+    public void string_is_empty(){
+        Assert.assertTrue(StringUtil.isEmpty(""));
+    }
+
+    @Test
+    public void string_is_empty_null(){
+        Assert.assertTrue(StringUtil.isEmpty(null));
+    }
+
+    @Test
+    public void string_is_empty_spaces(){
+        Assert.assertTrue(StringUtil.isEmpty("     "));
+    }
+
 }
